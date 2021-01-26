@@ -101,9 +101,10 @@ $sidebar-display: "sidebar-display";
     user-select: none;
   }
 
+/* nav menu font */
   .nav-link {
     border-radius: 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1px;
     display: table-cell;
@@ -313,7 +314,7 @@ $sidebar-display: "sidebar-display";
 }
 
 #breadcrumb {
-  font-size: 1rem;
+  font-size: 1.0rem;
   color: gray;
   padding-left: 0.5rem;
   a:hover {
@@ -335,6 +336,7 @@ $sidebar-display: "sidebar-display";
 }
 
 #search-wrapper {
+  margin-top: 0.05rem;
   display: flex;
   width: 95%;
   border-radius: 1rem;
@@ -343,7 +345,7 @@ $sidebar-display: "sidebar-display";
   padding: 0 0.5rem;
   i {
     z-index: 2;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: var(--search-icon-color);
   }
   .fa-times-circle { /* button 'clean up' */
@@ -494,7 +496,7 @@ footer {
   bottom: 0;
   padding: 0 1rem;
   height: $footer-height;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #7a7b7d;
   background-color: var(--footer-bg-color);
   > div.d-flex {
@@ -1206,7 +1208,7 @@ img {
 }
 
 
-@media all and (min-width: 577px) and (max-width: 1199px) {
+@media all and (min-width: 577px) and (max-width: 1299px) {
   footer>.d-flex > div {
     width: 312px;
   }
@@ -1269,7 +1271,7 @@ img {
 }
 
 /* Compact icons in sidebar & TOC hidden */
-@media all and (min-width: 832px) and (max-width: 1199px) {
+@media all and (min-width: 832px) and (max-width: 1299px) {
 
   #sidebar {
     width: $sidebar-width-small;

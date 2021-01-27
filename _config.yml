@@ -9,7 +9,7 @@
 # --------------------------
 title: 코드 배달부                      # the main title
 
-tagline: 거스    # it will display as the sub-title
+tagline: gus의 블로그   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -19,7 +19,7 @@ description: >-                        # used by seo meta and the atom feed
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://gus-an.github.io'
 
-author: 거스                  # change to your full name
+author: 안진우                 # change to your full name
 
 github:
   username: gus-an            # change to your github username
@@ -61,8 +61,8 @@ google_analytics:
     cache: false  # pv data local cache, good for the users from GFW area.
 
 disqus:
-  comments: false  # boolean type, the global switch for posts comments.
-  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  comments: true  # boolean type, the global switch for posts comments.
+  shortname: 'code-delivery'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 
 # Prefer color scheme setting.

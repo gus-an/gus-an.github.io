@@ -7,19 +7,13 @@ tags: [hyperledger, fabric, blockchain, private-blockchain]
 toc: true
 ---
 
-# 1. 개요
+이번 포스팅에서는 **Hyperledger Fabric (HLF)** 의 [공식 문서](https://hyperledger-fabric.readthedocs.io/en/release-2.2/whatis.html)를 참고하여 ``2.2``버젼을 기준으로 설치하고 프라이빗 블록체인 네트워크를 개인 컴퓨터에 구동해보겠습니다! 😃 
 
-블록체인 기술이 점점 무르익고 있습니다. 대중들에게 친숙한 블록체인은 대게 **Public Blockchain**인데요, 비트코인, 이더리움이 여기에 속합니다. 퍼블릭 블록체인의 모든 정보는 공개되어 있기 때문에 블록에 한 번 쌓인 어떤 정보도 조작할 수 없는 특징이 있죠!
-
-**이더리움**은 퍼블릭 블록체인 기술에 보편적인 코딩이 가능하도록 만들어진 기술입니다. **DApp**이라는 블록체인 기반 어플리케이션이 만들어질 수 있는 이유가 여기에 있습니다. 하지만 퍼블릭 블록체인이 상용화되기에는 크게 2가지 문제가 있습니다. 첫 째, 모든 정보를 모두에게 공개할 수만은 없다는 점. 둘 째, 구조적으로 블록이 쌓이는 속도의 성능 문제. 
-
-많은 사람들이 이를 해결하고자, **Private Blockchain** 기술을 개발했으며, 그 중에서 IBM 에서 이끌고 있는 Hyperledger 재단의 **Fabric** 이라고 불리는 블록체인 기술이 기업 및 국책 과제의 가장 많은 선택을 받고 있습니다. 프라이빗 블록체인의 가장 큰 특징은 허가된 조직들만이 블록체인 네트워크에 참여하고 블록 정보를 열람할 수 있다는 것입니다.
-
-오늘은 **Hyperledger Fabric (HLF)** 의 [공식 문서](https://hyperledger-fabric.readthedocs.io/en/release-2.2/whatis.html)를 참고하여 2.2버젼을 기준으로 설치하고 프라이빗 블록체인 네트워크를 개인 컴퓨터에 구동해보겠습니다! 😃 
 
 <h2>Table of Contents</h2>
 
-- [1. 개요](#1-개요)
+- [1. 들어가며](#1-들어가며)
+  - [1.1. Private Blockchain이란❔](#11-private-blockchain이란)
 - [2. Prerequisites](#2-prerequisites)
   - [2.1. Git](#21-git)
   - [2.2. curl](#22-curl)
@@ -32,6 +26,20 @@ toc: true
 - [4. test network](#4-test-network)
   - [4.1. 네트워크 컴포넌트 생성](#41-네트워크-컴포넌트-생성)
   - [4.2. 채널 생성](#42-채널-생성)
+
+<br>
+
+# 1. 들어가며
+
+## 1.1. Private Blockchain이란❔
+
+블록체인 기술이 점점 무르익고 있습니다. 대중에게 친숙한 블록체인은 보통 **Public Blockchain**인데요, 비트코인, 이더리움이 여기에 속합니다. 퍼블릭 블록체인의 모든 정보는 공개되어 있기 때문에 블록에 한 번 쌓인 어떤 정보도 조작할 수 없는 특징이 있죠!
+
+**이더리움**은 퍼블릭 블록체인 기술에 보편적인 코딩이 가능하게 만들어졌습니다. **DApp**이라는 블록체인 기반 어플리케이션이 이더리움 기반입니다. 하지만 퍼블릭 블록체인이 상용화되기에는 크게 2가지 문제가 있습니다. 첫 째, 모든 정보를 모두에게 공개할 수만은 없다는 점. 둘 째, 구조적으로 블록이 쌓이는 속도의 성능 문제. 
+
+많은 사람들이 이를 해결하고자 **Private Blockchain** 기술을 개발했습니다. 그 중에서 IBM 에서 이끌고 있는 Hyperledger 재단의 **Fabric** 이라고 불리는 블록체인 기술이 기업 및 국책 과제의 가장 많은 선택을 받고 있습니다. 프라이빗 블록체인의 가장 큰 특징은 허가된 조직들만이 블록체인 네트워크에 참여하고 블록 정보를 열람할 수 있다는 것입니다.
+
+<br>
 
 # 2. Prerequisites
 
@@ -106,16 +114,14 @@ $ docker --version
 $ docker ps
 ```
 
-<br>
+<h2> ⛔ ERROR 발생 </h2> 
 
-❌아래와 같은 에러가 발생하는 경우❌
 
->Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json: dial unix /var/run/docker.sock: connect: permission denied
+```console
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json: dial unix /var/run/docker.sock: connect: permission denied
+```
 
-<details>
-    <summary>해결 방법</summary>
-
-<br>
+<h2> ⚡ 해결 방법 </h2>
 
 ``ls`` 명령어로 ``/var/run/docker.sock`` 파일의 권한을 살펴보면 그룹에 대한 실행 권한이 빠져있습니다. 그룹 내 사용자의 접근 가능하게 변경합니다.
 
@@ -127,30 +133,7 @@ $ sudo chmod 666 /var/run/docker.sock
 
 ![docker_usergroup.png](/assets/img/screenshots/docker_usergroup.png)
 
-</details>
-
-<br>
-
-<details>
-    <summary>[재미로] 도커 hello-world 실행</summary>
-
-```console
-$ docker run hello-world
-```
-
-![docker_helloworld.png](/assets/img/screenshots/docker_helloworld.png)
-
-hello-world 실행시 사용된 컨테이너/이미지 확인 및 삭제
-
-```console
-$ docker ps -a
-$ docker rm $(docker ps -aq)
-$ docker images
-$ docker rmi $(docker images -aq)
-```
-</details>
-
-<br>
+<h2> ✅ </h2> 
 
 ## 2.4. Docker Compose
 
@@ -182,8 +165,6 @@ $ curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9
 - 현재 패브릭 2.2 버젼에서 배포된 최신 버젼은 ``fabric_version=2.2.2``와 ``fabric-ca_version=1.4.9``입니다.
 - 버젼 정보를 입력하지 않으면 latest production release 기준으로 받아지게 됩니다.
 
-<br>
-
 ## 3.1. Samples 확인
 
 ```console
@@ -194,8 +175,6 @@ $ ls
 받아온 소스코드는 ``fabric-samples`` 폴더 안에 위치합니다. 여기서 ``fabcar``, ``test-network``, ``high-throughput`` 등 여러가지 폴더들에 실행해볼 수 있는 패브릭 블록체인 예제가 들어있습니다. 
 
 ![fabric_samples.png](/assets/img/screenshots/fabric_samples.png)
-
-<br>
 
 ## 3.2. Binaries 확인
 
@@ -211,8 +190,6 @@ $ ls
 ```console
 $ export PATH=~/fabric-samples/bin:$PATH
 ```
-
-<br>
 
 ## 3.3. Docker Images 확인
 
@@ -333,7 +310,7 @@ $ ./network.sh createChannel -c mychannel
 
 <br>
 
-로그를 분석해 채널 생성 과정을 파헤쳐보겠습니다.💥
+<!-- 로그를 분석해 채널 생성 과정을 파헤쳐보겠습니다.💥
 
 
 1. 
@@ -383,6 +360,8 @@ configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/m
    + configtxlator proto_encode --input config_update_in_envelope.json --type common.Envelope
    ```
 - 채널에서 **protobuf 데이터** 형식인 config_block.pb`` protobuf 데이터를
-
+ -->
 
 채널 이름을 바꿔 여러개의 채널을 생성할 수 있습니다.
+
+미완성 포스팅입니다 ! 😅

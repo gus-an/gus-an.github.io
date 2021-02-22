@@ -125,10 +125,11 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.certfile = <사설인증서 .pem 파일의 절대경로>
 c.NotebookApp.keyfile = <사설인증서 .key 파일의 절대경로>
 ```
+
 - `ip`: IP를 `0.0.0.0`으로 설정하면, 어떤 곳에서든 접근이 가능합니다.
 - `password`: 이 위치에 위에서 생성한 `argon2` 해시값을 복사합니다.
 - `open_browser`: Jupyter 실행 시 서버에서 브라우저 열기를 해제합니다. 다른 브라우저를 통해 구동된 Jupyter 노트북에 접근은 여전히 가능합니다.
-- `certfile`, `keyfile`: <절대 경로>는 폴더에서 `pwd`명령어 입력 후 `/파일명`까지 붙이면 됩니다.
+- `certfile`, `keyfile`: `<절대 경로>`는 폴더에서 `pwd`명령어 입력 후 `/파일명`까지 붙이면 됩니다.
 
 <br>
 

@@ -1,13 +1,13 @@
 ---
-title: Hyperledger Fabric 설치부터 test-network 구동까지
+title: 도커를 이용한 Gitlab 깃랩 설치
 author: gus
-date: 2021-02-03 09:16:00 +0900 1
-categories: [Blockchain, Hyperledger Fabric]
-tags: [hyperledger, fabric, blockchain, private-blockchain]
+date: 2021-02-16 10:16:00 +0900 1
+categories: [ci/cd, gitlab]
+tags: [gitlab, docker]
 toc: true
 ---
 
-이번 포스팅에서는 **Hyperledger Fabric (HLF)** 의 [공식 문서](https://hyperledger-fabric.readthedocs.io/en/release-2.2/whatis.html)를 참고하여 ``2.2``버젼을 기준으로 설치하고 프라이빗 블록체인 네트워크를 개인 컴퓨터에 구동해보겠습니다! 😃 
+이번 포스팅에서는 도커를 활용하여 로컬 환경에 **Gitlab**을 설치해보겠습니다. 깃랩은 프라이빗한 **Github**라고 생각하면 됩니다. 깃허브의 경우 **Private Repository**도 지원하지만 공개되지 않았을 뿐 소스코드는 깃허브 측 데이터베이스에 업로드 됩니다. 반면 깃랩을 활용하면 모든 소스코드를 내 컴퓨터 내에서 관리하기 때문에 아주 안전한 방법이죠!
 
 
 <h2>Table of Contents</h2>

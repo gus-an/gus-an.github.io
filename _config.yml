@@ -11,12 +11,10 @@ host: 0.0.0.0
 
 title: 코드 배달부                      # the main title
 
-tagline: gus의 블로그   # it will display as the sub-title
+tagline: 거스의 블로그   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  🛵.... 거스의 블로그 - 생산적인 코드를 꾸준히 메모하고 최대한 친절하게 설명합니다. 😎
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://code-delivery.me'

@@ -1,0 +1,13 @@
+# Purple / Pink
+F9D1D1 살색
+FFA4B6
+F765A3 핫핑크
+A155B9 보라색
+165BAA
+0B1354 진한 보라색
+
+# GMK Arch
+#F6F5F5 white
+#383844 #484854 Grey
+#85C3BE Green
+#121217 Black

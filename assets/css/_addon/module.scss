@@ -61,7 +61,7 @@
   text-decoration: none;
 }
 
-@mixin sidebar-links($color: rgb(122, 122, 122)) {
+@mixin sidebar-links($color: #F6F5F5) {
   color: $color;
   transition: color 0.35s ease-in-out;
   user-select: none;

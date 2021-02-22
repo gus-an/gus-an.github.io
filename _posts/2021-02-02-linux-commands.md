@@ -2,8 +2,8 @@
 title: 리눅스 명령어 모음
 author: gus
 date: 2021-02-02 12:42:00 +0900 1
-categories: [Linux, Ubuntu]
-tags: [linux, commands]
+categories: [Linux, 노트]
+tags: [linux]
 toc: true
 ---
 

@@ -3,7 +3,7 @@ title: Oracle VM VirtualBox로 Ubuntu 설치하기
 author: gus
 date: 2021-02-01 14:46:00 +0900 1
 categories: [Linux, Ubuntu]
-tags: [linux, ubuntu, virtualbox]
+tags: [ubuntu, virtualbox]
 toc: true
 ---
 

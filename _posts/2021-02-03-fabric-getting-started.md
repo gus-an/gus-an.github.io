@@ -2,8 +2,8 @@
 title: Hyperledger Fabric 설치부터 test-network 구동까지
 author: gus
 date: 2021-02-03 09:16:00 +0900 1
-categories: [Blockchain, Hyperledger Fabric]
-tags: [hyperledger, fabric, blockchain, private-blockchain]
+categories: [블록체인, Hyperledger Fabric]
+tags: [hyperledger fabric, blockchain, private blockchain]
 toc: true
 ---
 

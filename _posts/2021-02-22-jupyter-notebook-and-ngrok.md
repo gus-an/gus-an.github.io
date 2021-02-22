@@ -256,6 +256,7 @@ ngrok 이 실행중인 화면입니다.
 
 ```console
 $ ./ngrok http https://localhost:8888 -host-header="localhost:8888" > /dev/null &
+$ disown -h
 ```
 
 그리고 api 주소를 확인하기 위해 다음을 입력합니다.
